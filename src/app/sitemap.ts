@@ -1,4 +1,5 @@
 
+import { LINK_MAP } from '@/linkMap';
 import { PROJECT_INFO } from '@/project';
 import { MetadataRoute } from 'next'
 
@@ -15,8 +16,16 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       date: new Date('2025-05-01'),
     },
     {
-      path: 'tools/text/converter',
+      path: LINK_MAP.tools.textConverter,
       date: new Date('2025-05-01'),
+    },
+    {
+      path: LINK_MAP.tools.textEscape,
+      date: new Date('2025-05-01'),
+    },
+    {
+      path: LINK_MAP.tools.formatters.json,
+      date: new Date('2025-08-29'),
     }
   ]
 
