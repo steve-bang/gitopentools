@@ -5,6 +5,7 @@ import { PROJECT_INFO } from "@/project";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
+import { title } from "process";
 import React from "react";
 import { FaAlignLeft, FaClock, FaCode, FaCss3Alt, FaDatabase, FaExchangeAlt, FaFileCode, FaFingerprint, FaHashtag, FaLink, FaLock, FaPalette, FaParagraph, FaQuoteRight, FaSearch, FaTextHeight } from "react-icons/fa";
 
@@ -190,9 +191,10 @@ export default function Sidebar() {
                                         SidebarMenuItems.filter(x => x.parentCode === rootItem.code).map((item) => (
                                             <li key={item.code}>
                                                 <Link href={item.path || "#"}
-                                                    className={`sidebar-menu-item flex items-center px-3 py-2 text-sm text-gray-700 rounded-lg ${currentPath === item.path ? 'active' : ''}`}
+                                                    className={`sidebar-menu-item flex items-center px-3 py-2 text-sm text-gray-700 rounded-lg ${currentPath === item.path ? 'active' : ''} ${!item.path && 'opacity-50 cursor-not-allowed'}`}
+                                                    title={!item.path ? 'Coming Soon' : item.label}
                                                 >
-                                                    {item.icon && <span className={`w-5 ${currentPath == item.path ? 'text-white' : 'text-purple-500'} mr-3`}>{item.icon}</span>}
+                                                    {item.icon && <span className={`w-5 ${currentPath == item.path ? 'text-white' : 'text-purple-500'} mr-1`}>{item.icon}</span>}
                                                     {item.label}
                                                 </Link>
                                             </li>
