@@ -3,6 +3,7 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
 import { defaultSEO } from "@/lib/seo.config";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -68,6 +69,7 @@ export default function RootLayout({
         <section>
           {children}
         </section>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
       </body>
     </html>
   );
