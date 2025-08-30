@@ -1,6 +1,6 @@
 
+import { defaultSEO } from '@/lib/seo.config';
 import { LINK_MAP } from '@/linkMap';
-import { PROJECT_INFO } from '@/project';
 import { MetadataRoute } from 'next'
 
 export interface RouteMap {
@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Add your static routes
   return routes.map((route) => ({
-    url: `https://${PROJECT_INFO.domain}${route.path}`,
+    url: `${defaultSEO.url}${route.path}`,
     lastModified: route.date,
     priority: route.path === '' ? 1 : 0.8,
   }))
