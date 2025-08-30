@@ -35,7 +35,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Add your static routes
   return routes.map((route) => ({
-    url: `https://${PROJECT_INFO.domain}/${route.path}`,
+    url: `https://${PROJECT_INFO.domain}${route.path}`,
     lastModified: route.date,
     priority: route.path === '' ? 1 : 0.8,
   }))
