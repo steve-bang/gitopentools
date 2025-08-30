@@ -27,7 +27,7 @@ export const metadata: Metadata = {
     title: defaultSEO.title,
     description: defaultSEO.description,
     type: "website",
-    url: "https://gitopentools.com"
+    url: "https://www.gitopentools.com"
   },
   robots: {
     index: true,

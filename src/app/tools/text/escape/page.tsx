@@ -19,7 +19,7 @@ const TextEscapePage = () => {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Text Escape Tool",
-    "url": "https://gitopentools.com/tools/text/escape",
+    "url": "https://www.gitopentools.com/tools/text/escape",
     "applicationCategory": "Utility",
     "description": "Powerful free escape & unescape text tool for developers."
   };

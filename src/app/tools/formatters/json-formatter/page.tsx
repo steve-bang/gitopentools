@@ -21,19 +21,19 @@ const JsonFormatterPage = () => {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Free JSON Formatter Online",
-    "url": "https://gitopentools.com/tools/formatters/json-formatter",
+    "url": "https://www.gitopentools.com/tools/formatters/json-formatter",
     "applicationCategory": "Utility",
     "description": "Format, validate, and beautify JSON online instantly. Free online JSON Formatter to beautify, minify, and validate JSON instantly. Perfect tool for developers to make JSON readable and error-free. Try GitOpenTools now!",
     "offers": {
       "@type": "Offer",
       "price": "0",
       "priceCurrency": "USD",
-      "url": "https://gitopentools.com/tools/formatters/json-formatter"
+      "url": "https://www.gitopentools.com/tools/formatters/json-formatter"
     },
     "creator": {
       "@type": "Organization",
       "name": "GitOpenTools",
-      "url": "https://gitopentools.com"
+      "url": "https://www.gitopentools.com"
     },
     "operatingSystem": "Web"
   };

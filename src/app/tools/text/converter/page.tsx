@@ -19,7 +19,7 @@ const TextConverterPage = () => {
     "@context": "https://schema.org",
     "@type": "SoftwareApplication",
     "name": "Text Converter Tool",
-    "url": "https://gitopentools.com/tools/text-converter",
+    "url": "https://www.gitopentools.com/tools/text-converter",
     "applicationCategory": "Utility",
     "description": "Free online text converter for developers. Convert your text to uppercase, lowercase, capitalize, or customize output easily."
   };
