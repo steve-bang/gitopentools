@@ -1,6 +1,6 @@
 "use client"
 
-import { FaCopy, FaCode, FaExchangeAlt, FaQuoteRight, FaPaste, FaTrash, FaHtml5, FaJsSquare, FaDatabase, FaDownload } from 'react-icons/fa';
+import { FaCopy, FaCode, FaExchangeAlt, FaQuoteRight, FaPaste, FaHtml5, FaJsSquare, FaDatabase, FaDownload, FaTimes } from 'react-icons/fa';
 import React from 'react';
 import useTextEscaper, { EscapersType } from './hooks';
 
@@ -41,15 +41,15 @@ const ToolInterface = () => {
         <div className="tool-card rounded-xl p-6">
           <div className="flex items-center justify-between mb-4">
             <h4 className="text-lg font-semibold text-gray-900">Input Text</h4>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-4">
               <button
-                className="px-3 py-1 text-sm text-gray-600 hover:text-red-600 transition-colors flex items-center gap-1"
+                className="text-gray-500 hover:text-red-600 transition-colors flex gap-1 text-xs"
                 onClick={textEscaper.clearInput}
               >
-                <FaTrash /> Clear
+                <FaTimes /> Clear
               </button>
               <button
-                className="px-3 py-1 text-sm text-gray-600 hover:text-purple-600 transition-colors flex items-center gap-1"
+                className="text-gray-500 hover:text-purple-600 transition-colors flex gap-1 text-xs"
                 onClick={textEscaper.pasteFromClipboard}
               >
                 <FaPaste /> Paste
@@ -97,7 +97,7 @@ const ToolInterface = () => {
             </h4>
             <div className="flex items-center space-x-2">
               <button
-                className="tooltip px-3 py-1 text-sm gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity flex items-center gap-1"
+                className="tooltip px-3 py-1 text-xs gradient-bg text-white rounded-lg hover:opacity-90 transition-opacity flex items-center gap-1"
                 data-tooltip="Copy to clipboard"
                 onClick={textEscaper.copyOutput}
               >

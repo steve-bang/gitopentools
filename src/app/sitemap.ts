@@ -26,6 +26,10 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
     {
       path: LINK_MAP.tools.formatters.json,
       date: new Date('2025-08-29'),
+    },
+    {
+      path: LINK_MAP.tools.formatters.sql,
+      date: new Date('2025-08-31'),
     }
   ]
 

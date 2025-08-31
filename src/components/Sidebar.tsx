@@ -76,7 +76,7 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
     {
         code: 'sqlFormatter',
         parentCode: 'formatters',
-        path: null,
+        path: LINK_MAP.tools.formatters.sql,
         icon: <FaDatabase />,
         label: 'SQL Formatter',
     },
