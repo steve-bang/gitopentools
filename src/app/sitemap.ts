@@ -8,7 +8,7 @@ export interface RouteMap {
   date: Date;
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: RouteMap[] = [
     {
@@ -41,6 +41,7 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
   return routes.map((route) => ({
     url: `${defaultSEO.url}${route.path}`,
     lastModified: route.date,
+    changeFrequency: 'yearly',
     priority: route.path === '' ? 1 : 0.8,
   }))
 
