@@ -170,7 +170,7 @@ export default function Sidebar() {
             {/* Search */}
             <div className="p-4">
                 <div className="relative">
-                    <input type="text" placeholder="Search tools..." className="w-full pl-10 pr-4 py-2 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" id="toolSearch" />
+                    <input type="text" placeholder="Search tools..." className="w-full text-sm pl-10 pr-2 py-1 border border-gray-200 rounded-lg focus:ring-2 focus:ring-purple-500 focus:border-transparent" id="toolSearch" />
                     <FaSearch className="absolute left-3 top-1/2 transform -translate-y-1/2 text-gray-400" />
                 </div>
             </div>
@@ -184,14 +184,14 @@ export default function Sidebar() {
                     {
                         SidebarMenuItems.filter(item => item.parentCode === null).map((rootItem) => (
                             <div className="px-4 py-2" key={rootItem.code}>
-                                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-3">{rootItem.label}</h3>
+                                <h3 className="text-xs font-semibold text-gray-500 uppercase tracking-wider mb-1">{rootItem.label}</h3>
                                 <ul className="space-y-1">
                                     {
 
                                         SidebarMenuItems.filter(x => x.parentCode === rootItem.code).map((item) => (
                                             <li key={item.code}>
                                                 <Link href={item.path || "#"}
-                                                    className={`sidebar-menu-item flex items-center px-3 py-2 text-sm text-gray-700 rounded-lg ${currentPath === item.path ? 'active' : ''} ${!item.path && 'opacity-50 cursor-not-allowed'}`}
+                                                    className={`sidebar-menu-item flex items-center px-2 py-1 text-sm text-gray-700 rounded-lg ${currentPath === item.path ? 'active' : ''} ${!item.path && 'opacity-50 cursor-not-allowed'}`}
                                                     title={!item.path ? 'Coming Soon' : item.label}
                                                 >
                                                     {item.icon && <span className={`w-5 ${currentPath == item.path ? 'text-white' : 'text-purple-500'} mr-1`}>{item.icon}</span>}

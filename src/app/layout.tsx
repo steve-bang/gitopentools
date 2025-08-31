@@ -64,6 +64,8 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="GitOpenTools" />
         <link rel="manifest" href="favicon/site.webmanifest" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
       <body className={inter.className}>
         <div className="scroll-indicator" id="scrollIndicator"></div>
@@ -71,7 +73,7 @@ export default function RootLayout({
           {children}
         </section>
         <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
-        <Analytics/>
+        <Analytics />
       </body>
     </html>
   );
