@@ -27,7 +27,8 @@ export const metadata: Metadata = {
     title: defaultSEO.title,
     description: defaultSEO.description,
     type: "website",
-    url: "https://www.gitopentools.com"
+    url: "https://www.gitopentools.com",
+    images: "https://www.gitopentools.com/assets/logo_text.png"
   },
   robots: {
     index: true,
@@ -67,6 +68,17 @@ export default function RootLayout({
         <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
+      <script type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "GitOpenTools",
+            "url": "https://www.gitopentools.com",
+            "logo": "https://www.gitopentools.com/assets/logo.png"
+          }),
+        }}
+      />
       <body className={inter.className}>
         <div className="scroll-indicator" id="scrollIndicator"></div>
         <section>

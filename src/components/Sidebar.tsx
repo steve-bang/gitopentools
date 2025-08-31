@@ -5,7 +5,6 @@ import { PROJECT_INFO } from "@/project";
 import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
-import { title } from "process";
 import React from "react";
 import { FaAlignLeft, FaClock, FaCode, FaCss3Alt, FaDatabase, FaExchangeAlt, FaFileCode, FaFingerprint, FaHashtag, FaLink, FaLock, FaPalette, FaParagraph, FaQuoteRight, FaSearch, FaTextHeight } from "react-icons/fa";
 
