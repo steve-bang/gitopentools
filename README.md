@@ -1,36 +1,82 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/app/api-reference/cli/create-next-app).
+# GitOpen Tools
 
-## Getting Started
+[![Repository Stars](https://img.shields.io/github/stars/YourUsername/GitOpenTools?style=social)]()
+[![License](https://img.shields.io/github/license/YourUsername/GitOpenTools)]()
 
-First, run the development server:
+**GitOpen Tools** is a free, open-source toolkit designed to help developers streamline their workflow with commonly used utilities like JSON formatting, SQL beautification, JWT decoding, Regex testing, and more.
+
+Visit our official website for an enhanced experience:  
+**[www.gitopentools.com](https://www.gitopentools.com/)**
+
+##  Screenshots / Demo
+
+*(Include visual examples to showcase your tools in action. Replace placeholder images with your actual screenshots or GIFs.)*
+
+- **Text Tools**  
+  ![Text Converter](./screenshots/text-converter.png)
+  ![Text Escape](./screenshots/text-escape.png)
+
+- **Formatters**  
+  ![Json Formatter](./screenshots/json-formatter.png)
+  ![SQL Formatter](./screenshots/sql-formatter.png)
+
+---
+
+##  Getting Started
+
+### Prerequisites
+
+- NextJS (v15+)  
+- npm or Yarn  
+
+
+### Installation & Local Development
 
 ```bash
+git clone https://github.com/steve-bang/gitopentools
+cd GitOpenTools
+npm install
 npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
 ```
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
 
-You can start editing the page by modifying `app/page.tsx`. The page auto-updates as you edit the file.
+## Contributing
 
-This project uses [`next/font`](https://nextjs.org/docs/app/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+We welcome all contributions! Here’s how to get started:
+- Fork the repository
+- Create a new branch:
+```
+git checkout -b feat/YourFeature
+```
 
-## Learn More
+- Commit your changes with clear messaging, e.g.:
+```
+git commit -m "feat: add YAML converter"
+```
 
-To learn more about Next.js, take a look at the following resources:
+- Push your branch and open a Pull Request
+- We’ll review and hopefully merge your contribution soon.
+- Please review our Code of Conduct and Contribution Guidelines if available.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn) - an interactive Next.js tutorial.
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+## Contact & Support
+- Official Website: [gitopentools.com](https://www.gitopentools.com/)
+- Issues & Feature Requests: [GitHub Issues](https://github.com/steve-bang/gitopentools/issues)
 
-## Deploy on Vercel
+---
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+## Why GitOpenTools?
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+- Open Source — community-driven, transparent, and customizable.
+- Streamlined Workflow — a unified toolset for developers, all in one place.
+- Flexible & Scalable — adapt and extend the toolkit as your project grows.
+
+---
+
+##  Suggestions to Consider
+
+- **Visual polish**: Add a banner or logo at the top using an image asset if available.
+- **Badges**: Display build status, download count, or coverage if applicable.
+- **Contributing**: If you've set up issue templates or automated checks, reference them in the Contributing section.
+- **Roadmap or TODO**: Consider an optional section listing planned features or enhancements.
+- **Deployment**: If you publish to npm or host docs, add instructions under a “Deployment” or “Publish” section.
