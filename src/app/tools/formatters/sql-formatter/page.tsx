@@ -9,7 +9,7 @@ import { defaultSEO } from "@/lib/seo.config";
 import { PROJECT_INFO } from "@/project";
 
 export const metadata = generateMetadata({
-  title: "Free SQL Formatter Online - Format & Beautify SQL Queries | GitOpenTools",
+  title: "Free SQL Formatter Online - Format & Beautify SQL Queries",
   description:
     "Free online SQL Formatter to beautify, format, and validate SQL queries instantly. Clean up messy SQL code with syntax highlighting, proper indentation, and error detection. Best SQL formatter tool for developers.",
   keywords: "sql formatter online, sql beautifier, sql validator, format sql online, pretty print sql, sql syntax highlighter, sql code formatter, sql query formatter, free sql tool, online sql editor, sql formatter free, beautify sql, sql parser, GitOpenTools, developer tools",
