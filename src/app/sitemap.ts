@@ -39,7 +39,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
 
   // Add your static routes
   return routes.map((route) => ({
-    url: `${defaultSEO.url}${route.path}`,
+    url: `${defaultSEO.baseUrl}${route.path}`,
     lastModified: route.date,
     changeFrequency: 'yearly',
     priority: route.path === '' ? 1 : 0.8,

@@ -12,7 +12,7 @@ export function generateMetadata({
     keywords: string;
     path: string;
 }): Metadata {
-    const url = `${defaultSEO.url}${path}`;
+    const url = `${defaultSEO.baseUrl}${path}`;
     return {
         title: title,
         description: description,
