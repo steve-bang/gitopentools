@@ -1,7 +1,7 @@
 # GitOpen Tools
 
-[![Repository Stars](https://img.shields.io/github/stars/steve-bang/GitOpenTools?style=social)]()
-[![License](https://img.shields.io/github/license/steve-bang/GitOpenTools)]()
+[![Repository Stars](https://img.shields.io/github/stars/steve-bang/gitopentools?style=social)]()
+[![License](https://img.shields.io/github/license/steve-bang/gitopentools)]()
 
 **GitOpen Tools** is a free, open-source toolkit designed to help developers streamline their workflow with commonly used utilities like JSON formatting, SQL beautification, JWT decoding, Regex testing, and more.
 
