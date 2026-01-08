@@ -129,7 +129,7 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
     {
         code: 'regexTester',
         parentCode: 'testers',
-        path: null,
+        path: LINK_MAP.tools.testers.regex,
         icon: <FaSearch />,
         label: 'Regex Tester',
 
@@ -137,7 +137,7 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
     {
         code: 'urlValidator',
         parentCode: 'testers',
-        path: null,
+        path: LINK_MAP.tools.testers.urlChecker,
         icon: <FaLink />,
         label: 'URL Validator',
 
