@@ -8,7 +8,12 @@ export const LINK_MAP = {
     formatters: {
       json: '/tools/formatters/json-formatter',
       xml: '/tools/formatters/xml-formatter',
+      sql: '/tools/formatters/sql-formatter',
       html: '/tools/formatters/html-formatter',
+    },
+    testers: {
+      regex: '/tools/testers/regex-tester',
+      urlChecker: "/tools/testers/url-checker-validator"
     }
   },
 }

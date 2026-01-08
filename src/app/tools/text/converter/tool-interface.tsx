@@ -55,17 +55,17 @@ const ToolInterface = () => {
               <FaEdit className='text-purple-500 mr-2' />
               Input Text
             </h4>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-4">
               <button
                 onClick={textConverter.clearText}
-                className="px-3 py-1 text-xs text-gray-600 hover:text-red-600 transition-colors tooltip flex items-center gap-2"
+                className="text-xs text-gray-600 hover:text-red-600 transition-colors tooltip flex items-center gap-1"
                 data-tooltip="Clear text"
               >
                 <FaTimes />Clear
               </button>
               <button
                 onClick={textConverter.loadSampleText}
-                className="px-3 py-1 text-xs text-purple-600 hover:text-purple-800 transition-colors tooltip flex items-center gap-2"
+                className="text-xs text-gray-600 hover:text-purple-800 transition-colors tooltip flex items-center gap-1"
                 data-tooltip="Load sample text"
               >
                 <FaMagic />Sample
@@ -91,11 +91,11 @@ const ToolInterface = () => {
               <FaFileAlt className="text-purple-500 mr-2" />
               Output Text
             </h4>
-            <div className="flex items-center space-x-2">
+            <div className="flex items-center space-x-4">
               <span id="conversionType" className="px-2 py-1 text-xs bg-purple-100 text-purple-800 rounded-full">Ready</span>
               <button
                 onClick={textConverter.copyOutput}
-                className="px-3 py-1 text-xs text-green-600 hover:text-green-800 transition-colors tooltip flex items-center gap-2"
+                className="text-xs text-green-600 hover:text-green-800 transition-colors tooltip flex items-center gap-1"
                 data-tooltip="Copy to clipboard"
                 id="copyButton"
               >

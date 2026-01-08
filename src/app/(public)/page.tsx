@@ -87,10 +87,10 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Case Converter</h3>
               <p className="text-gray-600 mb-4">Convert text between different cases: uppercase, lowercase, title case, camel case, and more.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              <Link href={LINK_MAP.tools.textConverter} className="flex items-center text-purple-600 font-medium">
                 <span>Try it now</span>
                 <FaArrowRight className="ml-2 text-sm" />
-              </div>
+              </Link>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover">
@@ -99,10 +99,10 @@ export default function Home() {
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">JSON Formatter</h3>
               <p className="text-gray-600 mb-4">Format, validate, and beautify JSON data with syntax highlighting and error detection.</p>
-              <div className="flex items-center text-purple-600 font-medium">
+              <Link href={LINK_MAP.tools.formatters.json} className="flex items-center text-purple-600 font-medium">
                 <span>Try it now</span>
                 <FaArrowRight className="ml-2 text-sm" />
-              </div>
+              </Link>
             </div>
 
             <div className="bg-white rounded-2xl p-8 shadow-lg border border-gray-100 card-hover">
@@ -327,7 +327,7 @@ export default function Home() {
           </p>
 
           <div className="flex flex-col sm:flex-row items-center justify-center space-y-4 sm:space-y-0 sm:space-x-6">
-            <Link href={LINK_MAP.tools.textConverter}  className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
+            <Link href={LINK_MAP.tools.textConverter} className="bg-white text-purple-600 px-8 py-4 rounded-xl font-semibold text-lg hover:bg-gray-100 transition-all transform hover:scale-105 shadow-lg">
               <FaPlay className="inline-block mr-2" />
               Start Using Tools
             </Link>

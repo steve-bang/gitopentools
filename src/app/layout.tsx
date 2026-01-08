@@ -3,6 +3,8 @@ import { Inter } from "next/font/google";
 import "./globals.css";
 import { Metadata } from "next";
 import { defaultSEO } from "@/lib/seo.config";
+import { GoogleAnalytics } from '@next/third-parties/google'
+import { Analytics } from "@vercel/analytics/next"
 
 
 const inter = Inter({ subsets: ["latin"] });
@@ -25,7 +27,8 @@ export const metadata: Metadata = {
     title: defaultSEO.title,
     description: defaultSEO.description,
     type: "website",
-    url: "https://gitopentools.com"
+    url: "https://www.gitopentools.com",
+    images: "https://www.gitopentools.com/assets/logo_text.png"
   },
   robots: {
     index: true,
@@ -62,12 +65,27 @@ export default function RootLayout({
         <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png" />
         <meta name="apple-mobile-web-app-title" content="GitOpenTools" />
         <link rel="manifest" href="favicon/site.webmanifest" />
+        <link rel="preconnect" href="https://www.googletagmanager.com" crossOrigin="anonymous" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
       </head>
+      <script type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "Organization",
+            "name": "GitOpenTools",
+            "url": "https://www.gitopentools.com",
+            "logo": "https://www.gitopentools.com/assets/logo.png"
+          }),
+        }}
+      />
       <body className={inter.className}>
         <div className="scroll-indicator" id="scrollIndicator"></div>
         <section>
           {children}
         </section>
+        <GoogleAnalytics gaId={process.env.NEXT_PUBLIC_GOOGLE_ANALYTICS || ""} />
+        <Analytics />
       </body>
     </html>
   );

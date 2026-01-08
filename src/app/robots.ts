@@ -7,7 +7,7 @@ export default function robots(): MetadataRoute.Robots {
       allow: '/',
       //disallow: ['/private/', '/admin/'],
     },
-    host: 'https://gitopentools.com',
-    sitemap: 'https://gitopentools.com/sitemap.xml',
+    host: 'https://www.gitopentools.com',
+    sitemap: 'https://www.gitopentools.com/sitemap.xml',
   }
 } 

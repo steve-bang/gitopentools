@@ -1,5 +1,6 @@
 
-import { PROJECT_INFO } from '@/project';
+import { defaultSEO } from '@/lib/seo.config';
+import { LINK_MAP } from '@/linkMap';
 import { MetadataRoute } from 'next'
 
 export interface RouteMap {
@@ -7,7 +8,7 @@ export interface RouteMap {
   date: Date;
 }
 
-export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
+export default function sitemap(): MetadataRoute.Sitemap {
 
   const staticRoutes: RouteMap[] = [
     {
@@ -15,8 +16,20 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
       date: new Date('2025-05-01'),
     },
     {
-      path: 'tools/text/converter',
+      path: LINK_MAP.tools.textConverter,
       date: new Date('2025-05-01'),
+    },
+    {
+      path: LINK_MAP.tools.textEscape,
+      date: new Date('2025-05-01'),
+    },
+    {
+      path: LINK_MAP.tools.formatters.json,
+      date: new Date('2025-08-29'),
+    },
+    {
+      path: LINK_MAP.tools.formatters.sql,
+      date: new Date('2025-08-31'),
     }
   ]
 
@@ -26,8 +39,9 @@ export default async function sitemap(): Promise<MetadataRoute.Sitemap> {
 
   // Add your static routes
   return routes.map((route) => ({
-    url: `https://${PROJECT_INFO.domain}/${route.path}`,
+    url: `${defaultSEO.baseUrl}${route.path}`,
     lastModified: route.date,
+    changeFrequency: 'yearly',
     priority: route.path === '' ? 1 : 0.8,
   }))
 

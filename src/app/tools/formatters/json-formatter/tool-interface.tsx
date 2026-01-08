@@ -1,6 +1,6 @@
 "use client"
 
-import { FaMagic, FaCopy, FaCode, FaTrashAlt, FaFileCode, FaPaste, FaDownload } from 'react-icons/fa';
+import { FaMagic, FaCopy, FaCode, FaFileCode, FaPaste, FaDownload, FaTimes } from 'react-icons/fa';
 import React from 'react';
 import useJsonFormatter from './hooks';
 
@@ -34,30 +34,30 @@ const ToolInterface = () => {
         <div className="tool-card rounded-xl p-6">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-gray-900">Input JSON</h3>
-            <div className="flex space-x-2">
+            <div className="flex space-x-4">
               <button
                 id="clearInput"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
+                className="text-gray-500 hover:text-rose-600 transition-colors flex gap-1"
                 data-tooltip="Clear Input"
                 onClick={jsonFormatter.clear}
               >
-                <FaTrashAlt />
+                <FaTimes /> <span className='text-xs'>Clear</span>
               </button>
               <button
                 id="pasteInput"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
+                className="text-gray-500 hover:text-purple-600 transition-colors flex gap-1"
                 data-tooltip="Paste from Clipboard"
                 onClick={jsonFormatter.pasteFromClipboard}
               >
-                <FaPaste />
+                <FaPaste /> <span className='text-xs'>Paste</span>
               </button>
               <button
                 id="sampleInput"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
+                className="text-gray-500 hover:text-purple-600 transition-colors flex gap-1"
                 data-tooltip="Load Sample JSON"
                 onClick={jsonFormatter.loadSampleJSON}
               >
-                <FaFileCode />
+                <FaFileCode /> <span className='text-xs'>Sample</span>
               </button>
             </div>
           </div>
@@ -83,22 +83,22 @@ const ToolInterface = () => {
         <div className="tool-card rounded-xl p-6">
           <div className="flex justify-between items-center mb-4">
             <h3 className="text-lg font-semibold text-gray-900">Formatted JSON</h3>
-            <div className="flex space-x-2">
+            <div className="flex space-x-4">
               <button
                 id="copyOutput"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
+                className="text-gray-500 hover:text-purple-600 transition-colors flex gap-1"
                 data-tooltip="Copy to Clipboard"
                 onClick={jsonFormatter.copyToClipboard}
               >
-                <FaCopy />
+                <FaCopy /> <span className='text-xs'>Copy</span>
               </button>
               <button
                 id="downloadOutput"
-                className="text-gray-500 hover:text-purple-600 transition-colors"
+                className="text-gray-500 hover:text-purple-600 transition-colors flex gap-1"
                 data-tooltip="Download JSON"
                 onClick={jsonFormatter.downloadJson}
               >
-                <FaDownload />
+                <FaDownload /> <span className='text-xs'>Download</span>
               </button>
             </div>
           </div>
