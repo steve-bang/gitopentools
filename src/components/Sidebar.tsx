@@ -105,7 +105,7 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
     {
         code: 'uuidGenerator',
         parentCode: 'generators',
-        path: null,
+        path: LINK_MAP.tools.generators.uuid,
         icon: <FaFingerprint />,
         label: 'UUID Generator',
 

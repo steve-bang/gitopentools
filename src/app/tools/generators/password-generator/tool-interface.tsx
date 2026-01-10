@@ -194,7 +194,7 @@ const ToolInterface = () => {
 
           {/* Generate Button */}
           <button
-            className={`w-full py-3 px-4 rounded-lg font-medium flex items-center justify-center transition-all ${
+            className={`w-full py-3 px-4 rounded-lg font-medium flex items-center justify-center transition-all text-white cursor-pointer ${
               isGenerateDisabled || isGenerating
                 ? 'bg-gray-300 cursor-not-allowed'
                 : 'gradient-bg hover:opacity-90 active:scale-[0.98]'

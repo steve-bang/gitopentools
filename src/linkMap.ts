@@ -12,7 +12,8 @@ export const LINK_MAP = {
       html: '/tools/formatters/html-formatter',
     },
     generators: {
-      password: '/tools/generators/password-generator'
+      password: '/tools/generators/password-generator',
+      uuid: '/tools/generators/uuid-generator'
     },
     testers: {
       regex: '/tools/testers/regex-tester',
