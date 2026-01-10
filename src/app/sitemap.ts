@@ -30,7 +30,24 @@ export default function sitemap(): MetadataRoute.Sitemap {
     {
       path: LINK_MAP.tools.formatters.sql,
       date: new Date('2025-08-31'),
-    }
+    },
+    {
+      path: LINK_MAP.tools.testers.regex,
+      date: new Date('2026-01-09'),
+    },
+    {
+      path: LINK_MAP.tools.testers.urlChecker,
+      date: new Date('2026-01-09'),
+    },
+    {
+      path: LINK_MAP.tools.generators.password,
+      date: new Date('2026-01-10'),
+    },
+    {
+      path: LINK_MAP.tools.generators.uuid,
+      date: new Date('2026-01-10'),
+    },
+
   ]
 
   const routes: RouteMap[] = [
