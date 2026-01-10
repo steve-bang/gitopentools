@@ -97,7 +97,7 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
     {
         code: 'passwordGenerator',
         parentCode: 'generators',
-        path: null,
+        path: LINK_MAP.tools.generators.password,
         icon: <FaLock />,
         label: 'Password Generator',
 
