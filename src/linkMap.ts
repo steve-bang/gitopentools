@@ -11,6 +11,9 @@ export const LINK_MAP = {
       sql: '/tools/formatters/sql-formatter',
       html: '/tools/formatters/html-formatter',
     },
+    generators: {
+      password: '/tools/generators/password-generator'
+    },
     testers: {
       regex: '/tools/testers/regex-tester',
       urlChecker: "/tools/testers/url-checker-validator"
