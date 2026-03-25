@@ -4,136 +4,144 @@ import HeaderNavigation from '@/components/HeaderNavigation';
 import ToolInterface from './tool-interface';
 import { generateMetadata } from '@/lib/seo';
 import { LINK_MAP } from "@/linkMap";
-import { defaultSEO } from "@/lib/seo.config";
-import { PROJECT_INFO } from "@/project";
 
 export const metadata = generateMetadata({
-  title: "Free URL Checker & Validator Online - Verify Website Accessibility",
+  title: "URL Checker & Validator Online - HTTP Status, Redirects, and Response Time",
   description:
-    "Free online URL Checker and Validator tool to verify website accessibility, HTTP status codes, response time, and URL structure. Check if URLs are valid, accessible, and get detailed breakdown of URL components.",
-  keywords: "url checker online, url validator, website accessibility checker, http status checker, url response time, url structure analyzer, free url testing tool, website availability checker, url validation, url parser, GitOpenTools, developer tools",
-  path: LINK_MAP.tools.testers.urlChecker
+    "Check a URL for validity and reachability: get HTTP status code, response time, and a clear breakdown of URL parts (protocol, domain, path, query). Great for debugging redirects and broken links. Run a free URL check on GitOpenTools.",
+  keywords: "url checker, url validator online, check url status code, http status checker, website availability checker, url response time checker, check redirects url, broken link checker single url, url parser breakdown, https ssl checker, GitOpenTools url checker",
+  path: LINK_MAP.tools.testers.urlChecker,
+  openGraph: {
+    title: "URL Checker & Validator - Status Code and Response Time | GitOpenTools",
+    description:
+      "Validate a URL and quickly see HTTP status, response time, and URL structure details. Useful for debugging redirects and broken links with GitOpenTools.",
+  },
+  twitter: {
+    title: "URL Checker & Validator Online",
+    description:
+      "Validate URLs and check reachability with status codes and response time. Free tool on GitOpenTools.",
+  },
 });
 
-const urlPage = `${defaultSEO.baseUrl}${LINK_MAP.tools.testers.urlChecker}`
-
 const URLCheckerValidatorPage = () => {
-  const toolSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Free URL Checker & Validator Online",
-    "url": urlPage,
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web",
-    "description":
-      "Professional URL checker and validator tool to verify website accessibility, analyze URL structure, check HTTP status codes, measure response time, and validate URL components.",
-    "featureList": [
-      "Check URL accessibility instantly",
-      "Get detailed HTTP status codes",
-      "Measure website response time",
-      "Analyze URL structure and components",
-      "Validate URL syntax and format",
-      "Check SSL/TLS security",
-      "Extract domain, port, and path information",
-      "No registration required"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "url": urlPage
+  const pageTitle = "URL Checker & Validator Online - HTTP Status, Redirects, and Response Time";
+  const pageDescription =
+    "Check a URL for validity and reachability: get HTTP status code, response time, and a clear breakdown of URL parts (protocol, domain, path, query). Great for debugging redirects and broken links. Run a free URL check on GitOpenTools.";
+  const pageUrl = "https://www.gitopentools.com/tools/testers/url-checker-validator";
+
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": pageTitle,
+      "headline": pageTitle,
+      "description": pageDescription,
+      "url": pageUrl,
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "GitOpenTools",
+        "url": "https://www.gitopentools.com"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "URL validation and checking"
+      }
     },
-    "creator": {
-      "@type": "Organization",
-      "name": "GitOpen Tools",
-      "url": defaultSEO.baseUrl,
-      "logo": `${defaultSEO.baseUrl}/assets/logo.png`,
-      "sameAs": [
-        PROJECT_INFO.socials.github
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.gitopentools.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://www.gitopentools.com/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Testers",
+          "item": "https://www.gitopentools.com/tools/testers"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "URL Checker & Validator",
+          "item": pageUrl
+        }
       ]
     },
-    "keywords": [
-      "url checker online",
-      "url validator",
-      "website accessibility checker",
-      "http status checker",
-      "url response time",
-      "url structure analyzer",
-      "free url testing tool",
-      "website availability checker"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.7",
-      "ratingCount": "1985",
-      "bestRating": "5",
-      "worstRating": "1"
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a URL checker validate?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A URL checker verifies that a URL is syntactically valid and attempts to reach it to report HTTP status, response time, and basic connection results."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can this tool help with redirects and broken links?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Checking a URL is a fast way to spot common issues like 404 pages, 500 errors, and unexpected redirect behavior during debugging."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What details do I get about the URL structure?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "You can view URL parts such as protocol, domain, port, path, and query parameters, which helps when you are building or troubleshooting links."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the URL Checker & Validator free on GitOpenTools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can validate and check URLs for free without creating an account or installing software."
+          }
+        }
+      ]
     },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Web Developer"
-        },
-        "reviewBody": "Essential tool for checking URL accessibility and analyzing website response. Very accurate and fast."
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "URL Checker & Validator",
+      "url": pageUrl,
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "description": "Free online URL checker and validator to confirm reachability and inspect URL structure. Get HTTP status codes and response time to debug redirects and broken links on GitOpenTools.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "url": pageUrl
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "GitOpenTools",
+        "url": "https://www.gitopentools.com"
       }
-    ]
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a URL Checker & Validator?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A URL Checker & Validator is a tool that verifies if a website URL is accessible, valid, and properly structured. It checks HTTP status codes, response time, SSL certificates, and provides detailed breakdown of URL components."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What information does this tool provide?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "The tool provides accessibility status, HTTP status code, response time, and detailed URL components including protocol, domain, port, path, security status, and the complete URL structure."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this URL checker free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our URL Checker & Validator is completely free to use with no registration required. You can check unlimited URLs online."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I check URLs with different protocols?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, the tool supports HTTP, HTTPS, FTP, and other common protocols. It automatically detects and validates the protocol used in the URL."
-        }
-      }
-    ]
-  };
+    }
+  ];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
       {/* Main Content Area */}
       <section>
@@ -147,6 +155,76 @@ const URLCheckerValidatorPage = () => {
         <div className='flex-1 overflow-auto p-6 space-y-6'>
           {/* Tool interface */}
           <ToolInterface />
+
+          <article className="tool-card rounded-xl p-6 space-y-8">
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">What is URL Checker &amp; Validator?</h2>
+              <p className="text-gray-600 leading-7">
+                URL Checker &amp; Validator is a quick diagnostic tool for links. It helps you validate a URL format and check whether a
+                website responds, including HTTP status codes and response time, so you can troubleshoot links faster.
+              </p>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">How to use URL Checker &amp; Validator</h2>
+              <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-7">
+                <li>Paste a full URL (including https://) into the input field.</li>
+                <li>Click <span className="font-medium text-gray-900">Check URL</span> to validate and run the check.</li>
+                <li>Review the HTTP status and response time to confirm reachability.</li>
+                <li>Inspect URL details (protocol, domain, path, query) to catch formatting issues.</li>
+              </ol>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">When to use URL Checker &amp; Validator</h2>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-7">
+                <li>When debugging broken links, unexpected redirects, or mixed http/https issues.</li>
+                <li>When validating URLs before putting them into configs, webhooks, or API payloads.</li>
+                <li>When checking if a service endpoint is responding and how fast it responds.</li>
+                <li>When verifying URL components to avoid subtle parsing mistakes.</li>
+              </ul>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">Why use GitOpenTools?</h2>
+              <p className="text-gray-600 leading-7">
+                GitOpenTools provides practical tools that are easy to access and quick to use. Validate and check URLs directly in the
+                browser with no install and no account. It is a simple way to investigate link issues and move forward with confidence.
+              </p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-2xl font-bold text-gray-900">FAQ</h2>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">What does a URL checker validate?</h3>
+                <p className="text-gray-600 leading-7">
+                  It checks URL syntax and then attempts to reach the URL to report status and timing information.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Can this tool help with redirects and broken links?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. Status codes and reachability checks are a fast way to find 404s, server errors, and redirect-related issues.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">What details do I get about the URL structure?</h3>
+                <p className="text-gray-600 leading-7">
+                  You can see protocol, domain, port, path, and query parts, which helps you fix malformed links quickly.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Is the URL Checker &amp; Validator free on GitOpenTools?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. It is free to use with no sign-up and no installation required.
+                </p>
+              </div>
+            </section>
+          </article>
         </div>
       </section>
     </>
