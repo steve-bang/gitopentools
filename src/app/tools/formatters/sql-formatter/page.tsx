@@ -5,140 +5,144 @@ import HeaderNavigation from '@/components/HeaderNavigation';
 import ToolInterface from './tool-interface';
 import { generateMetadata } from '@/lib/seo';
 import { LINK_MAP } from "@/linkMap";
-import { defaultSEO } from "@/lib/seo.config";
-import { PROJECT_INFO } from "@/project";
 
 export const metadata = generateMetadata({
-  title: "Free SQL Formatter Online - Format & Beautify SQL Queries",
+  title: "SQL Formatter Online - Beautify and Reformat SQL Queries Free",
   description:
-    "Free online SQL Formatter to beautify, format, and validate SQL queries instantly. Clean up messy SQL code with syntax highlighting, proper indentation, and error detection. Best SQL formatter tool for developers.",
-  keywords: "sql formatter online, sql beautifier, sql validator, format sql online, pretty print sql, sql syntax highlighter, sql code formatter, sql query formatter, free sql tool, online sql editor, sql formatter free, beautify sql, sql parser, GitOpenTools, developer tools",
-  path: LINK_MAP.tools.formatters.sql
+    "Reformat SQL queries online with clean indentation, readable keyword spacing, and faster query review. Use this free SQL formatter to tidy SELECT, JOIN, and nested statements instantly on GitOpenTools.",
+  keywords: "sql formatter online, format sql query, sql beautifier free, pretty print sql, sql query formatter, beautify sql online, sql indent tool, format select query, format join query, sql cleanup tool, developer sql formatter, online sql formatter GitOpenTools",
+  path: LINK_MAP.tools.formatters.sql,
+  openGraph: {
+    title: "Online SQL Formatter for Cleaner Queries | GitOpenTools",
+    description:
+      "Paste messy SQL, format it into readable query blocks, and review joins, filters, and nested statements more easily with GitOpenTools.",
+  },
+  twitter: {
+    title: "SQL Formatter Online for Readable Queries",
+    description:
+      "Clean up SQL statements, improve readability, and format complex queries fast with this free SQL formatter from GitOpenTools.",
+  },
 });
 
-const urlPage = `${defaultSEO.baseUrl}${LINK_MAP.tools.formatters.sql}`
-
 const SQLFormatterPage = () => {
+  const pageTitle = "SQL Formatter Online - Beautify and Reformat SQL Queries Free";
+  const pageDescription =
+    "Reformat SQL queries online with clean indentation, readable keyword spacing, and faster query review. Use this free SQL formatter to tidy SELECT, JOIN, and nested statements instantly on GitOpenTools.";
+  const pageUrl = "https://www.gitopentools.com/tools/formatters/sql-formatter";
 
-
-  const toolSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Free SQL Formatter Online",
-    "url": urlPage,
-    "applicationCategory": "DeveloperApplication",
-    "operatingSystem": "Web",
-    "description":
-      "Professional SQL formatter tool to beautify, validate, and format SQL queries online. Features syntax highlighting, proper indentation, and instant formatting for MySQL, PostgreSQL, SQL Server, Oracle, and SQLite queries.",
-    "featureList": [
-      "Format SQL queries instantly",
-      "Syntax highlighting for better readability",
-      "Support for multiple SQL dialects",
-      "Validate SQL syntax",
-      "Proper indentation and formatting",
-      "Minify SQL code",
-      "Copy formatted results",
-      "No registration required"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "url": urlPage
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": pageTitle,
+      "headline": pageTitle,
+      "description": pageDescription,
+      "url": pageUrl,
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "GitOpenTools",
+        "url": "https://www.gitopentools.com"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "SQL query formatting"
+      }
     },
-    "creator": {
-      "@type": "Organization",
-      "name": "GitOpen Tools",
-      "url": defaultSEO.baseUrl,
-      "logo": `${defaultSEO.baseUrl}/assets/logo.png`,
-      "sameAs": [
-        PROJECT_INFO.socials.github
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.gitopentools.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://www.gitopentools.com/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Formatters",
+          "item": "https://www.gitopentools.com/tools/formatters"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "SQL Formatter",
+          "item": pageUrl
+        }
       ]
     },
-    "keywords": [
-      "sql formatter online",
-      "sql beautifier",
-      "sql validator",
-      "format sql online",
-      "sql syntax highlighter",
-      "sql code formatter",
-      "sql query formatter",
-      "free sql tool",
-      "online sql editor"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.8",
-      "ratingCount": "2547",
-      "bestRating": "5",
-      "worstRating": "1"
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "What does a SQL formatter do?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "A SQL formatter reorganizes SQL statements with consistent indentation, line breaks, and spacing so queries are easier to scan, review, and maintain."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I use this formatter for long or nested SQL queries?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. It is useful for long SELECT statements, nested subqueries, multiple JOINs, and filter-heavy SQL where readability matters during debugging or review."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Does this SQL formatter support common SQL dialects?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. The formatter is suitable for common SQL styles used in MySQL, PostgreSQL, SQL Server, Oracle, SQLite, and other widely used SQL workflows."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is the SQL formatter free on GitOpenTools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can format SQL online for free on GitOpenTools without creating an account or installing any desktop software."
+          }
+        }
+      ]
     },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Developer"
-        },
-        "reviewBody": "Best free SQL formatter online. Clean interface and perfect formatting every time."
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "SQL Formatter Online",
+      "url": pageUrl,
+      "applicationCategory": "DeveloperApplication",
+      "operatingSystem": "Web",
+      "description": "Free online SQL formatter for rewriting messy queries into readable SQL blocks. Improve query clarity, review complex joins more easily, and clean up statements for development work with GitOpenTools.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "url": pageUrl
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "GitOpenTools",
+        "url": "https://www.gitopentools.com"
       }
-    ]
-  };
-
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "What is a SQL formatter?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "A SQL formatter is a tool that automatically formats and beautifies SQL code by adding proper indentation, spacing, and structure to make it more readable and maintainable."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Which SQL databases are supported?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Our SQL formatter supports all major SQL databases including MySQL, PostgreSQL, SQL Server, Oracle, SQLite, and standard ANSI SQL syntax."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Is this SQL formatter free to use?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our SQL formatter is completely free to use with no registration required. You can format unlimited SQL queries online."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I validate SQL syntax with this tool?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, our SQL formatter includes syntax validation to help you identify and fix errors in your SQL queries while formatting them."
-        }
-      }
-    ]
-  };
+    }
+  ];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
       {/* Main Content Area */}
       <section>
@@ -150,6 +154,77 @@ const SQLFormatterPage = () => {
 
           {/* Tool interface */}
           <ToolInterface />
+
+          <article className="tool-card rounded-xl p-6 space-y-8">
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">What is SQL Formatter?</h2>
+              <p className="text-gray-600 leading-7">
+                SQL Formatter is an online query cleanup tool that restructures raw SQL into a layout that is much easier to read.
+                Instead of scanning one long statement, you get organized clauses, clearer joins, and better spacing for faster review.
+              </p>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">How to use SQL Formatter</h2>
+              <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-7">
+                <li>Paste your SQL statement into the input editor or load the sample query.</li>
+                <li>Click <span className="font-medium text-gray-900">Format SQL</span> to reorganize the query structure instantly.</li>
+                <li>Inspect the formatted result to review clauses, joins, aliases, and nested logic more clearly.</li>
+                <li>Copy the cleaned SQL or download it for use in your project, migration, or code review.</li>
+              </ol>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">When to use SQL Formatter</h2>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-7">
+                <li>When a long SQL query is difficult to debug because everything is compressed into one block.</li>
+                <li>When you need to review multi-join or nested queries before shipping database changes.</li>
+                <li>When you want cleaner SQL for pull requests, shared snippets, documentation, or handoff.</li>
+                <li>When you are comparing query logic and need readable formatting to spot mistakes faster.</li>
+              </ul>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">Why use GitOpenTools?</h2>
+              <p className="text-gray-600 leading-7">
+                GitOpenTools keeps the workflow simple: open the page, paste your SQL, and format it right away in the browser.
+                There is nothing to install, no account wall, and no charge. It is a privacy-first option for developers who want
+                quick utility tools without extra friction.
+              </p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-2xl font-bold text-gray-900">FAQ</h2>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">What does a SQL formatter do?</h3>
+                <p className="text-gray-600 leading-7">
+                  It rewrites SQL with clearer indentation, spacing, and line breaks so the statement is easier to read and review.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Can I use this formatter for long or nested SQL queries?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. It is especially helpful for large queries with subqueries, joins, and complex filtering logic.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Does this SQL formatter support common SQL dialects?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. It is useful across common SQL workflows such as MySQL, PostgreSQL, SQL Server, Oracle, and SQLite-style queries.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Is the SQL formatter free on GitOpenTools?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. You can format SQL online for free without signing up or installing a separate app.
+                </p>
+              </div>
+            </section>
+          </article>
 
         </div>
       </section>
