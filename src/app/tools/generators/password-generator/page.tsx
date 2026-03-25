@@ -4,131 +4,144 @@ import HeaderNavigation from '@/components/HeaderNavigation';
 import ToolInterface from './tool-interface';
 import { generateMetadata } from '@/lib/seo';
 import { LINK_MAP } from "@/linkMap";
-import { defaultSEO } from "@/lib/seo.config";
-import { PROJECT_INFO } from "@/project";
 
 export const metadata = generateMetadata({
-  title: "Password Generator – Secure, Free & Client-Side | GitOpenTools",
-  description: "Generate strong, secure passwords instantly. 100% client-side, no tracking, no storage. Built for developers.",
-  keywords: "strong password generator free, password generator online strong, very strong password generator, secure password generator, random password generator, strong password, password creator, password maker, online password generator, free password generator, client-side password generator, developer password tool, easy to remember password generator",
-  path: LINK_MAP.tools.generators.password
+  title: "Secure Password Generator Online - Random Strong Passwords Free",
+  description:
+    "Create strong random passwords instantly with presets, length control, and character rules (avoid similar, repeated, sequential). Runs locally in your browser for privacy. Generate a secure password now on GitOpenTools.",
+  keywords: "secure password generator, random password generator online, strong password generator free, password generator 64 characters, client side password generator, web crypto password generator, developer password generator, api token password generator, ssh password generator, password entropy calculator, no tracking password generator, GitOpenTools password generator",
+  path: LINK_MAP.tools.generators.password,
+  openGraph: {
+    title: "Password Generator (Client-Side) - Strong Random Passwords | GitOpenTools",
+    description:
+      "Generate high-entropy passwords locally in your browser. Pick length, include/exclude symbols, and use presets for dev, websites, or finance. Free on GitOpenTools.",
+  },
+  twitter: {
+    title: "Secure Password Generator - Client-Side",
+    description:
+      "Generate strong random passwords fast with presets and advanced rules. Privacy-first and free on GitOpenTools.",
+  },
 });
 
-const urlPage = `${defaultSEO.baseUrl}${LINK_MAP.tools.generators.password}`;
-
 const PasswordGeneratorPage = () => {
-  const toolSchema = {
-    "@context": "https://schema.org",
-    "@type": "SoftwareApplication",
-    "name": "Password Generator",
-    "url": urlPage,
-    "applicationCategory": "SecurityApplication",
-    "operatingSystem": "Web",
-    "description": "Secure client-side password generator that creates strong, random passwords locally in your browser. No data is sent to servers, no logging, no tracking.",
-    "featureList": [
-      "Generate secure passwords locally",
-      "Customizable password length (6-64 characters)",
-      "Multiple character sets support",
-      "Password strength indicator",
-      "Copy to clipboard functionality",
-      "No registration required",
-      "100% client-side processing"
-    ],
-    "offers": {
-      "@type": "Offer",
-      "price": "0",
-      "priceCurrency": "USD",
-      "availability": "https://schema.org/InStock",
-      "url": urlPage
+  const pageTitle = "Secure Password Generator Online - Random Strong Passwords Free";
+  const pageDescription =
+    "Create strong random passwords instantly with presets, length control, and character rules (avoid similar, repeated, sequential). Runs locally in your browser for privacy. Generate a secure password now on GitOpenTools.";
+  const pageUrl = "https://www.gitopentools.com/tools/generators/password-generator";
+
+  const schemas = [
+    {
+      "@context": "https://schema.org",
+      "@type": "WebPage",
+      "name": pageTitle,
+      "headline": pageTitle,
+      "description": pageDescription,
+      "url": pageUrl,
+      "isPartOf": {
+        "@type": "WebSite",
+        "name": "GitOpenTools",
+        "url": "https://www.gitopentools.com"
+      },
+      "about": {
+        "@type": "Thing",
+        "name": "Password generation"
+      }
     },
-    "creator": {
-      "@type": "Organization",
-      "name": "GitOpen Tools",
-      "url": defaultSEO.baseUrl,
-      "logo": `${defaultSEO.baseUrl}/assets/logo.png`,
-      "sameAs": [
-        PROJECT_INFO.socials.github
+    {
+      "@context": "https://schema.org",
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        {
+          "@type": "ListItem",
+          "position": 1,
+          "name": "Home",
+          "item": "https://www.gitopentools.com/"
+        },
+        {
+          "@type": "ListItem",
+          "position": 2,
+          "name": "Tools",
+          "item": "https://www.gitopentools.com/tools"
+        },
+        {
+          "@type": "ListItem",
+          "position": 3,
+          "name": "Generators",
+          "item": "https://www.gitopentools.com/tools/generators"
+        },
+        {
+          "@type": "ListItem",
+          "position": 4,
+          "name": "Password Generator",
+          "item": pageUrl
+        }
       ]
     },
-    "keywords": [
-      "password generator",
-      "secure password generator",
-      "random password generator",
-      "strong password",
-      "password creator",
-      "online password tool"
-    ],
-    "aggregateRating": {
-      "@type": "AggregateRating",
-      "ratingValue": "4.9",
-      "ratingCount": "3125",
-      "bestRating": "5",
-      "worstRating": "1"
+    {
+      "@context": "https://schema.org",
+      "@type": "FAQPage",
+      "mainEntity": [
+        {
+          "@type": "Question",
+          "name": "Does this password generator run locally in the browser?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Passwords are generated in your browser using the Web Crypto API, so you can create secure passwords without sending your input to a server."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "What password length should I choose?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "For most accounts, 12 to 16 characters is a good baseline. For sensitive accounts, infrastructure access, and API credentials, consider 20+ characters and enable multiple character types."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Can I avoid confusing characters like O, 0, l, and I?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. Turn on the exclude similar characters option to reduce copy mistakes, especially when you have to type a password manually."
+          }
+        },
+        {
+          "@type": "Question",
+          "name": "Is this password generator free on GitOpenTools?",
+          "acceptedAnswer": {
+            "@type": "Answer",
+            "text": "Yes. You can generate strong random passwords for free with no sign-up and no installation required."
+          }
+        }
+      ]
     },
-    "review": [
-      {
-        "@type": "Review",
-        "reviewRating": {
-          "@type": "Rating",
-          "ratingValue": "5"
-        },
-        "author": {
-          "@type": "Person",
-          "name": "Security Engineer"
-        },
-        "reviewBody": "Perfect for generating secure passwords locally. No server calls means complete privacy."
+    {
+      "@context": "https://schema.org",
+      "@type": "SoftwareApplication",
+      "name": "Password Generator",
+      "url": pageUrl,
+      "applicationCategory": "SecurityApplication",
+      "operatingSystem": "Web",
+      "description": "Free client-side password generator that creates strong random passwords with length controls, presets, and advanced rules. Use GitOpenTools to generate high-entropy passwords quickly without installing extra software.",
+      "offers": {
+        "@type": "Offer",
+        "price": "0",
+        "priceCurrency": "USD",
+        "url": pageUrl
+      },
+      "creator": {
+        "@type": "Organization",
+        "name": "GitOpenTools",
+        "url": "https://www.gitopentools.com"
       }
-    ]
-  };
-
-  const faqSchema = {
-    "@context": "https://schema.org",
-    "@type": "FAQPage",
-    "mainEntity": [
-      {
-        "@type": "Question",
-        "name": "Is this password generator safe?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Yes, it's completely safe. All password generation happens locally in your browser. No data is sent to any server, and there's no logging or tracking of any kind."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Are generated passwords stored?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "No, passwords are never stored. They are generated in real-time in your browser's memory and are only displayed on your screen. They disappear when you refresh or close the page."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "What is a strong password length?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "We recommend at least 12-16 characters for most uses. For highly sensitive accounts (banking, SSH keys, etc.), consider 20+ characters with all character types enabled."
-        }
-      },
-      {
-        "@type": "Question",
-        "name": "Can I use this for banking or production systems?",
-        "acceptedAnswer": {
-          "@type": "Answer",
-          "text": "Absolutely. The passwords generated are cryptographically secure and suitable for any use, including banking, production systems, SSH keys, and API tokens."
-        }
-      }
-    ]
-  };
+    }
+  ];
 
   return (
     <>
       <script
         type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(toolSchema) }}
-      />
-      <script
-        type="application/ld+json"
-        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(schemas) }}
       />
       
       {/* Main Content Area */}
@@ -144,109 +157,76 @@ const PasswordGeneratorPage = () => {
           {/* Tool interface */}
           <ToolInterface />
 
-          {/* Trust & Security Explanation */}
-          <div className="tool-card rounded-xl p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">How This Password Generator Works</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 gradient-bg rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">100% Client-Side</h3>
-                    <p className="text-gray-600 text-sm">All password generation happens locally in your browser</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 gradient-bg rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">No Data Storage</h3>
-                    <p className="text-gray-600 text-sm">Passwords are never stored or transmitted to servers</p>
-                  </div>
-                </div>
-              </div>
-              <div className="space-y-3">
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 gradient-bg rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Cryptographically Secure</h3>
-                    <p className="text-gray-600 text-sm">Uses Web Crypto API for true random number generation</p>
-                  </div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-8 h-8 gradient-bg rounded-full flex items-center justify-center flex-shrink-0">
-                    <span className="text-white text-sm">✓</span>
-                  </div>
-                  <div>
-                    <h3 className="font-medium text-gray-900">Production Ready</h3>
-                    <p className="text-gray-600 text-sm">Suitable for GitHub, SSH, APIs, and production systems</p>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
+          <article className="tool-card rounded-xl p-6 space-y-8">
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">What is Password Generator?</h2>
+              <p className="text-gray-600 leading-7">
+                Password Generator is a free online tool for creating strong random passwords that are hard to guess and easy to copy.
+                It runs locally in your browser, so you can generate credentials quickly without relying on external apps or plugins.
+              </p>
+            </section>
 
-          {/* Use Cases Section */}
-          <div className="tool-card rounded-xl p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Common Use Cases</h2>
-            <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4">
-              {[
-                { icon: "🔑", title: "GitHub/GitLab", desc: "Repository access" },
-                { icon: "💻", title: "SSH Keys", desc: "Server access" },
-                { icon: "🗄️", title: "Databases", desc: "User credentials" },
-                { icon: "🔌", title: "API Tokens", desc: "Service integration" },
-                { icon: "⚙️", title: "Env Files", desc: ".env configuration" },
-              ].map((useCase, index) => (
-                <div key={index} className="text-center p-4 border border-gray-200 rounded-lg hover:border-purple-500 transition-colors">
-                  <div className="text-2xl mb-2">{useCase.icon}</div>
-                  <h3 className="font-medium text-gray-900 mb-1">{useCase.title}</h3>
-                  <p className="text-gray-600 text-sm">{useCase.desc}</p>
-                </div>
-              ))}
-            </div>
-          </div>
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">How to use Password Generator</h2>
+              <ol className="list-decimal pl-6 space-y-2 text-gray-600 leading-7">
+                <li>Pick a preset (Developer/SSH, Website Login, Banking) or choose Custom.</li>
+                <li>Set the password length and select which character types to include.</li>
+                <li>Optional: enable advanced rules to exclude similar characters and avoid repeats or sequences.</li>
+                <li>Click <span className="font-medium text-gray-900">Generate Password</span>, then copy the result.</li>
+              </ol>
+            </section>
 
-          {/* FAQ Section */}
-          <div className="tool-card rounded-xl p-6">
-            <h2 className="text-xl font-bold text-gray-900 mb-4">Frequently Asked Questions</h2>
-            <div className="space-y-4">
-              {[
-                {
-                  q: "Is this password generator safe?",
-                  a: "Yes, it's 100% safe. All password generation happens locally in your browser using the Web Crypto API. No data is sent to any server, and there's no logging or tracking of any kind."
-                },
-                {
-                  q: "Are generated passwords stored?",
-                  a: "No, passwords are never stored. They are generated in real-time in your browser's memory and are only displayed on your screen. They disappear when you refresh or close the page."
-                },
-                {
-                  q: "What is a strong password length?",
-                  a: "We recommend at least 12-16 characters for most uses. For highly sensitive accounts (banking, SSH keys, etc.), consider 20+ characters with all character types enabled. The tool supports up to 64 characters."
-                },
-                {
-                  q: "Can I use this for banking or production systems?",
-                  a: "Absolutely. The passwords generated are cryptographically secure and suitable for any use, including banking, production systems, SSH keys, and API tokens. The entropy calculation ensures strong passwords."
-                },
-                {
-                  q: "What makes a password strong?",
-                  a: "A strong password has sufficient length (12+ characters), includes multiple character types (uppercase, lowercase, numbers, symbols), avoids predictable patterns, and has high entropy (complexity). Our tool helps you achieve all these criteria."
-                }
-              ].map((faq, index) => (
-                <details key={index} className="group border border-gray-200 rounded-lg p-4 hover:border-purple-500 transition-colors">
-                  <summary className="flex justify-between items-center cursor-pointer list-none">
-                    <span className="font-medium text-gray-900">{faq.q}</span>
-                    <span className="text-purple-600 group-open:rotate-180 transition-transform">▼</span>
-                  </summary>
-                  <p className="mt-3 text-gray-600">{faq.a}</p>
-                </details>
-              ))}
-            </div>
-          </div>
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">When to use Password Generator</h2>
+              <ul className="list-disc pl-6 space-y-2 text-gray-600 leading-7">
+                <li>When rotating credentials for GitHub, GitLab, servers, and internal tooling.</li>
+                <li>When creating API keys, service tokens, or database passwords.</li>
+                <li>When you need a high-entropy password for finance or admin accounts.</li>
+                <li>When you want to avoid confusing characters to reduce typos and copy mistakes.</li>
+              </ul>
+            </section>
+
+            <section className="space-y-3">
+              <h2 className="text-2xl font-bold text-gray-900">Why use GitOpenTools?</h2>
+              <p className="text-gray-600 leading-7">
+                GitOpenTools focuses on practical, privacy-first utilities. You can generate passwords directly in the browser with no
+                installation, no account, and no cost. It is a fast way to create secure credentials and get back to building.
+              </p>
+            </section>
+
+            <section className="space-y-4">
+              <h2 className="text-2xl font-bold text-gray-900">FAQ</h2>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Does this password generator run locally in the browser?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. Passwords are generated in your browser using the Web Crypto API, with no server round trips required.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">What password length should I choose?</h3>
+                <p className="text-gray-600 leading-7">
+                  For everyday accounts, 12 to 16 characters is a solid baseline. For sensitive access, go longer (20+) and enable
+                  multiple character types.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Can I avoid confusing characters like O, 0, l, and I?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. Enable the exclude similar option to reduce mistakes when you have to type a password manually.
+                </p>
+              </div>
+
+              <div className="space-y-1">
+                <h3 className="text-lg font-semibold text-gray-900">Is this password generator free on GitOpenTools?</h3>
+                <p className="text-gray-600 leading-7">
+                  Yes. It is free to use, with no sign-up and nothing to install.
+                </p>
+              </div>
+            </section>
+          </article>
         </div>
       </section>
     </>
