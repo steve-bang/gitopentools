@@ -1,34 +1,51 @@
 import { Metadata } from "next";
 import { defaultSEO } from "./seo.config";
 
+interface GenerateMetadataProps {
+    title: string;
+    description: string;
+    keywords: string;
+    path: string;
+    openGraph?: {
+        title?: string;
+        description?: string;
+    };
+    twitter?: {
+        title?: string;
+        description?: string;
+    };
+}
+
 export function generateMetadata({
     title,
     description,
     keywords,
     path,
-}: {
-    title: string;
-    description: string;
-    keywords: string;
-    path: string;
-}): Metadata {
+    openGraph,
+    twitter,
+}: GenerateMetadataProps): Metadata {
     const url = `${defaultSEO.baseUrl}${path}`;
+    const openGraphTitle = openGraph?.title || title;
+    const openGraphDescription = openGraph?.description || description;
+    const twitterTitle = twitter?.title || openGraphTitle;
+    const twitterDescription = twitter?.description || openGraphDescription;
+
     return {
         title: title,
         description: description,
         keywords: keywords,
         alternates: { canonical: url },
         openGraph: {
-            title: title,
-            description: description,
+            title: openGraphTitle,
+            description: openGraphDescription,
             url: url,
             siteName: defaultSEO.siteName,
             type: "website",
         },
         twitter: {
             card: "summary_large_image",
-            title: title,
-            description: description,
+            title: twitterTitle,
+            description: twitterDescription,
         },
         robots: {
             index: true,

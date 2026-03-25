@@ -38,20 +38,20 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
         icon: <FaQuoteRight />,
         label: 'Text Escape',
     },
-    {
-        code: 'loremIpsum',
-        parentCode: 'text_tools',
-        path: null,
-        icon: <FaParagraph />,
-        label: 'Lorem Ipsum',
-    },
-    {
-        code: 'textFormatter',
-        parentCode: 'text_tools',
-        path: null,
-        icon: <FaAlignLeft />,
-        label: 'Text Formatter',
-    },
+    // {
+    //     code: 'loremIpsum',
+    //     parentCode: 'text_tools',
+    //     path: null,
+    //     icon: <FaParagraph />,
+    //     label: 'Lorem Ipsum',
+    // },
+    // {
+    //     code: 'textFormatter',
+    //     parentCode: 'text_tools',
+    //     path: null,
+    //     icon: <FaAlignLeft />,
+    //     label: 'Text Formatter',
+    // },
     {
         code: 'formatters',
         parentCode: null,
@@ -66,13 +66,13 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
         icon: <FaFileCode />,
         label: 'JSON Formatter',
     },
-    {
-        code: 'xmlFormatter',
-        parentCode: 'formatters',
-        path: null,
-        icon: <FaFileCode />,
-        label: 'XML Formatter',
-    },
+    // {
+    //     code: 'xmlFormatter',
+    //     parentCode: 'formatters',
+    //     path: null,
+    //     icon: <FaFileCode />,
+    //     label: 'XML Formatter',
+    // },
     {
         code: 'sqlFormatter',
         parentCode: 'formatters',
@@ -80,13 +80,13 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
         icon: <FaDatabase />,
         label: 'SQL Formatter',
     },
-    {
-        code: 'cssFormatter',
-        parentCode: 'formatters',
-        path: null,
-        icon: <FaCss3Alt />,
-        label: 'CSS Formatter',
-    },
+    // {
+    //     code: 'cssFormatter',
+    //     parentCode: 'formatters',
+    //     path: null,
+    //     icon: <FaCss3Alt />,
+    //     label: 'CSS Formatter',
+    // },
     {
         code: 'generators',
         parentCode: null,
@@ -110,15 +110,13 @@ export const SidebarMenuItems: SidebarMenuItemType[] = [
         label: 'UUID Generator',
 
     },
-    {
-        code: 'colorGenerator',
-        parentCode: 'generators',
-        path: null,
-        icon: <FaPalette />,
-        label: 'Color Generator',
-
-    },
-
+    // {
+    //     code: 'colorGenerator',
+    //     parentCode: 'generators',
+    //     path: null,
+    //     icon: <FaPalette />,
+    //     label: 'Color Generator',
+    // },
     {
         code: 'testers',
         parentCode: null,
